@@ -28,14 +28,17 @@ function timeblocking() {
             $(this).removeClass("future")
             $(this).removeClass("present")
             $(this).addClass("past")
+            $(this).attr('disabled','disabled');
         } else if (blockTime === currentTime){
             $(this).removeClass("past");
             $(this).removeClass("future");
             $(this).addClass("present");
+            $(this).removeAttr('disabled');
         } else {
             $(this).removeClass("present");
             $(this).removeClass("past");
             $(this).addClass("future");
+            
         }
     })
 };
